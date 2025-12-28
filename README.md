@@ -22,17 +22,19 @@ Projet personnel réalisé dans le cadre d’une candidature en Master Cyberséc
 ## Références
 - Bonnes pratiques de sécurité (ANSSI – hygiène informatique)
 
-## System setup
+## Configuration du système
+
+## Configuration du système
 
 - Distribution : Ubuntu
-- Kernel : Linux (WSL)
-- System updated using apt update / upgrade
-- Purpose : Secure baseline before hardening
+- Noyau : Linux (WSL)
+- Système mis à jour via `apt update` / `apt upgrade`
+- Objectif : Mise en place d’une base sécurisée avant le durcissement
 
-## Day 3 - Admin user
+## Jour 3 – Utilisateur administrateur
 
-- Created a non-root admin user: `administrator`
-- Granted sudo privileges
-- Verified sudo access (`sudo whoami` -> root)
+- Création d’un utilisateur administrateur non-root : `administrator`
+- Attribution des privilèges sudo
+- Vérification de l’accès administrateur (`sudo whoami` → root)
 
 
