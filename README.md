@@ -29,3 +29,10 @@ Projet personnel réalisé dans le cadre d’une candidature en Master Cyberséc
 - System updated using apt update / upgrade
 - Purpose : Secure baseline before hardening
 
+## Day 3 - Admin user
+
+- Created a non-root admin user: `administrator`
+- Granted sudo privileges
+- Verified sudo access (`sudo whoami` -> root)
+
+
