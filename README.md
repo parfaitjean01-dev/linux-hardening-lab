@@ -149,3 +149,25 @@ Protéger le service SSH contre les tentatives d’authentification répétées 
 
 Fail2Ban permet de réduire efficacement le risque d’attaques par force brute sur le service SSH en appliquant des blocages automatiques et temporaires.
 
+## Audit et vérifications
+
+### Ports ouverts
+- Vérification avec `ss -tulpen`
+- Seul le port SSH (22/tcp) est exposé
+
+### Pare-feu (UFW)
+- Politique par défaut restrictive
+- Connexions entrantes refusées
+- SSH explicitement autorisé
+
+### Configuration SSH effective
+- Accès root désactivé
+- Authentification par mot de passe désactivée
+- Authentification par clé uniquement
+- Accès limité à l’utilisateur `administrator`
+
+### Protection contre le brute-force
+- Fail2Ban actif sur le service SSH
+- Surveillance du fichier `/var/log/auth.log`
+- Bannissement automatique après tentatives échouées
+
