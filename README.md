@@ -87,4 +87,37 @@ Les preuves de l’audit sont stockées dans le répertoire suivant :
 
 L’audit confirme que la surface d’attaque est réduite et conforme aux bonnes pratiques de sécurisation de base.
 
+## Pare-feu (UFW)
+
+### Objectif
+
+Réduire la surface d’attaque du système en appliquant une politique de filtrage réseau restrictive, conforme aux bonnes pratiques de sécurisation de base.
+
+### Mise en place
+
+- Installation du pare-feu UFW
+- Application d’une politique restrictive par défaut :
+  - Refus de toutes les connexions entrantes
+  - Autorisation des connexions sortantes
+- Autorisation explicite du service SSH afin de conserver l’accès administrateur
+
+### Règles appliquées
+
+- Politique par défaut :
+  - `deny incoming`
+  - `allow outgoing`
+- Port autorisé :
+  - SSH (22/tcp)
+
+### Vérification
+
+État du pare-feu après configuration :
+
+- Pare-feu actif et activé au démarrage
+- Aucune exposition de service inutile
+- Accès distant limité strictement au service SSH
+
+### Conclusion
+
+La configuration du pare-feu permet de limiter efficacement les risques d’exposition réseau en n’autorisant que le strict nécessaire. Cette étape réduit significativement la surface d’attaque du système et constitue une base solide pour un environnement sécurisé.
 
