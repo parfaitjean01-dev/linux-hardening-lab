@@ -121,3 +121,31 @@ Réduire la surface d’attaque du système en appliquant une politique de filtr
 
 La configuration du pare-feu permet de limiter efficacement les risques d’exposition réseau en n’autorisant que le strict nécessaire. Cette étape réduit significativement la surface d’attaque du système et constitue une base solide pour un environnement sécurisé.
 
+## Protection contre les attaques par force brute (Fail2Ban)
+
+### Objectif
+
+Protéger le service SSH contre les tentatives d’authentification répétées en bloquant automatiquement les adresses IP suspectes.
+
+### Mise en place
+
+- Installation de Fail2Ban
+- Activation du jail SSH (`sshd`)
+- Limitation du nombre de tentatives d’authentification
+- Blocage temporaire des adresses IP en cas d’échec répété
+
+### Paramètres appliqués
+
+- Nombre maximum de tentatives : 3
+- Fenêtre d’observation : 10 minutes
+- Durée de bannissement : 10 minutes
+
+### Vérification
+
+- Service Fail2Ban actif
+- Jail SSH actif et surveillant les journaux d’authentification
+
+### Conclusion
+
+Fail2Ban permet de réduire efficacement le risque d’attaques par force brute sur le service SSH en appliquant des blocages automatiques et temporaires.
+
