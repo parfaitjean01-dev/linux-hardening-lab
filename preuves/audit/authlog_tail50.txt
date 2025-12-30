@@ -1,0 +1,50 @@
+2025-12-29T01:34:08.608099+01:00 ParfaitPC sudo:  parfait : TTY=pts/0 ; PWD=/home/parfait/linux-hardening-lab ; USER=root ; COMMAND=/usr/bin/nano /etc/fail2ban/jail.local
+2025-12-29T01:34:08.608833+01:00 ParfaitPC sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-29T01:35:37.823473+01:00 ParfaitPC sudo: pam_unix(sudo:session): session closed for user root
+2025-12-29T01:35:51.376120+01:00 ParfaitPC sudo:  parfait : TTY=pts/0 ; PWD=/home/parfait/linux-hardening-lab ; USER=root ; COMMAND=/usr/bin/systemctl enable fail2ban
+2025-12-29T01:35:51.379279+01:00 ParfaitPC sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-29T01:35:55.239883+01:00 ParfaitPC sudo: pam_unix(sudo:session): session closed for user root
+2025-12-29T01:35:55.244568+01:00 ParfaitPC sudo:  parfait : TTY=pts/0 ; PWD=/home/parfait/linux-hardening-lab ; USER=root ; COMMAND=/usr/bin/systemctl restart fail2ban
+2025-12-29T01:35:55.245036+01:00 ParfaitPC sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-29T01:35:56.076032+01:00 ParfaitPC sudo: pam_unix(sudo:session): session closed for user root
+2025-12-29T01:35:56.081158+01:00 ParfaitPC sudo:  parfait : TTY=pts/0 ; PWD=/home/parfait/linux-hardening-lab ; USER=root ; COMMAND=/usr/bin/systemctl status fail2ban
+2025-12-29T01:35:56.081527+01:00 ParfaitPC sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-29T01:36:39.216417+01:00 ParfaitPC sudo:  parfait : TTY=pts/0 ; PWD=/home/parfait/linux-hardening-lab ; USER=root ; COMMAND=/usr/bin/fail2ban-client status
+2025-12-29T01:36:39.216799+01:00 ParfaitPC sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-29T01:36:39.288668+01:00 ParfaitPC sudo: pam_unix(sudo:session): session closed for user root
+2025-12-29T01:36:39.293659+01:00 ParfaitPC sudo:  parfait : TTY=pts/0 ; PWD=/home/parfait/linux-hardening-lab ; USER=root ; COMMAND=/usr/bin/fail2ban-client status sshd
+2025-12-29T01:36:39.295114+01:00 ParfaitPC sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-29T01:36:39.374284+01:00 ParfaitPC sudo: pam_unix(sudo:session): session closed for user root
+2025-12-29T01:39:20.209261+01:00 ParfaitPC sudo:  parfait : TTY=pts/0 ; PWD=/home/parfait/linux-hardening-lab ; USER=root ; COMMAND=/usr/sbin/ufw status verbose
+2025-12-29T01:39:20.218799+01:00 ParfaitPC sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-29T01:39:20.430354+01:00 ParfaitPC sudo: pam_unix(sudo:session): session closed for user root
+2025-12-29T01:39:31.076722+01:00 ParfaitPC sudo:  parfait : TTY=pts/0 ; PWD=/home/parfait/linux-hardening-lab ; USER=root ; COMMAND=/usr/sbin/sshd -T
+2025-12-29T01:39:31.077966+01:00 ParfaitPC sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-29T01:39:31.126941+01:00 ParfaitPC sudo: pam_unix(sudo:session): session closed for user root
+2025-12-29T01:39:53.966451+01:00 ParfaitPC sudo:  parfait : TTY=pts/0 ; PWD=/home/parfait/linux-hardening-lab ; USER=root ; COMMAND=/usr/bin/fail2ban-client status sshd
+2025-12-29T01:39:53.966956+01:00 ParfaitPC sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-29T01:39:54.116862+01:00 ParfaitPC sudo: pam_unix(sudo:session): session closed for user root
+2025-12-29T20:17:01.611602+01:00 ParfaitPC CRON[11944]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-12-29T20:17:01.658638+01:00 ParfaitPC CRON[11944]: pam_unix(cron:session): session closed for user root
+2025-12-30T12:16:59.545276+01:00 ParfaitPC CRON[12492]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-12-30T12:16:59.579624+01:00 ParfaitPC CRON[12492]: pam_unix(cron:session): session closed for user root
+2025-12-30T12:17:01.611254+01:00 ParfaitPC CRON[12495]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-12-30T12:17:01.638957+01:00 ParfaitPC CRON[12495]: pam_unix(cron:session): session closed for user root
+2025-12-30T13:17:01.995322+01:00 ParfaitPC CRON[12750]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-12-30T13:17:02.047505+01:00 ParfaitPC CRON[12750]: pam_unix(cron:session): session closed for user root
+2025-12-30T22:18:15.857090+01:00 ParfaitPC CRON[12972]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-12-30T22:18:15.880645+01:00 ParfaitPC CRON[12972]: pam_unix(cron:session): session closed for user root
+2025-12-30T23:17:01.165483+01:00 ParfaitPC CRON[13104]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-12-30T23:17:01.186281+01:00 ParfaitPC CRON[13104]: pam_unix(cron:session): session closed for user root
+2025-12-31T00:17:01.293686+01:00 ParfaitPC CRON[14469]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-12-31T00:17:01.309542+01:00 ParfaitPC CRON[14469]: pam_unix(cron:session): session closed for user root
+2025-12-31T00:23:27.164289+01:00 ParfaitPC sudo:  parfait : TTY=pts/3 ; PWD=/home/parfait/linux-hardening-lab ; USER=root ; COMMAND=/usr/bin/fail2ban-client status sshd
+2025-12-31T00:23:27.179903+01:00 ParfaitPC sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-31T00:23:27.478442+01:00 ParfaitPC sudo: pam_unix(sudo:session): session closed for user root
+2025-12-31T00:23:46.824260+01:00 ParfaitPC sshd[14546]: Invalid user fakeuser from 127.0.0.1 port 50338
+2025-12-31T00:23:46.841222+01:00 ParfaitPC sshd[14546]: Connection closed by invalid user fakeuser 127.0.0.1 port 50338 [preauth]
+2025-12-31T00:24:01.809613+01:00 ParfaitPC sudo:  parfait : TTY=pts/3 ; PWD=/home/parfait/linux-hardening-lab ; USER=root ; COMMAND=/usr/bin/fail2ban-client status sshd
+2025-12-31T00:24:01.810797+01:00 ParfaitPC sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-12-31T00:24:01.919725+01:00 ParfaitPC sudo: pam_unix(sudo:session): session closed for user root
+2025-12-31T00:24:01.933148+01:00 ParfaitPC sudo:  parfait : TTY=pts/3 ; PWD=/home/parfait/linux-hardening-lab ; USER=root ; COMMAND=/usr/bin/tail -n 50 /var/log/auth.log
+2025-12-31T00:24:01.933884+01:00 ParfaitPC sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)

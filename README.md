@@ -19,6 +19,23 @@ Projet personnel réalisé dans le cadre d’une candidature en Master Cyberséc
 5. Audit basique (ports, logs)
 6. Documentation et preuves
 
+## Démarche
+J’ai fait ce projet progressivement : d’abord la mise en place des mesures (SSH, UFW, Fail2Ban), puis des vérifications et un petit audit (ports, services, logs)
+
+## Risques visés (simple)
+
+Ce que je voulais éviter :
+- accès SSH par mot de passe (brute-force)
+- accès root à distance
+- exposition de services inutiles
+- manque de filtrage réseau
+
+Mes réponses :
+- clés SSH uniquement + root désactivé
+- UFW en politique restrictive, SSH autorisé
+- Fail2Ban pour limiter les tentatives
+- vérifications avec `ss`, `systemctl`, logs SSH
+
 ## Références
 - Bonnes pratiques de sécurité (ANSSI – hygiène informatique)
 
@@ -145,6 +162,14 @@ Protéger le service SSH contre les tentatives d’authentification répétées 
 - Service Fail2Ban actif
 - Jail SSH actif et surveillant les journaux d’authentification
 
+### Petite vérification
+
+J’ai généré quelques tentatives SSH échouées en local et vérifié les logs + le statut Fail2Ban.
+Preuves :
+- `preuves/audit/fail2ban_status_avant.txt`
+- `preuves/audit/fail2ban_status_apres.txt`
+- `preuves/audit/authlog_tail50.txt`
+
 ### Conclusion
 
 Fail2Ban permet de réduire efficacement le risque d’attaques par force brute sur le service SSH en appliquant des blocages automatiques et temporaires.
@@ -185,3 +210,6 @@ Les principales surfaces d’attaque ont été réduites grâce à :
 Les audits réalisés et les preuves collectées confirment que seuls les services strictement nécessaires sont exposés et que les mécanismes de sécurité sont correctement appliqués.
 
 Cette configuration constitue une base saine avant d’envisager des mesures de durcissement plus avancées, telles que la supervision, la centralisation des journaux, le durcissement du noyau ou l’ajout de mécanismes de détection d’intrusion.
+
+## Limite
+Projet fait en environnement de lab (VM/WSL). Certaines protections plus avancées (noyau, IDS complet) ne sont pas abordées ici.
