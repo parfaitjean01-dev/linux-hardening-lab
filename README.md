@@ -171,3 +171,17 @@ Fail2Ban permet de réduire efficacement le risque d’attaques par force brute 
 - Surveillance du fichier `/var/log/auth.log`
 - Bannissement automatique après tentatives échouées
 
+## CONCLUSION GENERALE DU PROJET
+
+Ce projet a permis de mettre en place une base de sécurisation robuste pour un système Linux accessible à distance via SSH.
+
+Les principales surfaces d’attaque ont été réduites grâce à :
+- la suppression de l’accès root à distance,
+- la désactivation de l’authentification par mot de passe,
+- l’utilisation exclusive de clés SSH pour l’accès administrateur,
+- l’application d’un pare-feu restrictif avec UFW,
+- la protection contre les attaques par force brute via Fail2Ban.
+
+Les audits réalisés et les preuves collectées confirment que seuls les services strictement nécessaires sont exposés et que les mécanismes de sécurité sont correctement appliqués.
+
+Cette configuration constitue une base saine avant d’envisager des mesures de durcissement plus avancées, telles que la supervision, la centralisation des journaux, le durcissement du noyau ou l’ajout de mécanismes de détection d’intrusion.
